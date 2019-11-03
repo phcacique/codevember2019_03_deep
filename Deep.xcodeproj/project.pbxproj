@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A70568B9236F212C00268785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70568B8236F212C00268785 /* AppDelegate.swift */; };
-		A70568BB236F212C00268785 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A70568BA236F212C00268785 /* GameScene.sks */; };
-		A70568BD236F212C00268785 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A70568BC236F212C00268785 /* Actions.sks */; };
 		A70568BF236F212C00268785 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70568BE236F212C00268785 /* GameScene.swift */; };
 		A70568C1236F212C00268785 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70568C0236F212C00268785 /* GameViewController.swift */; };
 		A70568C4236F212C00268785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70568C2236F212C00268785 /* Main.storyboard */; };
@@ -17,6 +15,9 @@
 		A70568C9236F212D00268785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70568C7236F212D00268785 /* LaunchScreen.storyboard */; };
 		A70568D4236F212D00268785 /* DeepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70568D3236F212D00268785 /* DeepTests.swift */; };
 		A70568DF236F212D00268785 /* DeepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70568DE236F212D00268785 /* DeepUITests.swift */; };
+		A70568F0236F21F100268785 /* CircularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70568EC236F21F100268785 /* CircularCell.swift */; };
+		A70568F2236F21F100268785 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70568EE236F21F100268785 /* Rule.swift */; };
+		A70568F3236F21F100268785 /* CircularGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70568EF236F21F100268785 /* CircularGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 /* Begin PBXFileReference section */
 		A70568B5236F212C00268785 /* Deep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70568B8236F212C00268785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A70568BA236F212C00268785 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		A70568BC236F212C00268785 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A70568BE236F212C00268785 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A70568C0236F212C00268785 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A70568C3236F212C00268785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,9 @@
 		A70568DA236F212D00268785 /* DeepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70568DE236F212D00268785 /* DeepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepUITests.swift; sourceTree = "<group>"; };
 		A70568E0236F212D00268785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70568EC236F21F100268785 /* CircularCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularCell.swift; sourceTree = "<group>"; };
+		A70568EE236F21F100268785 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		A70568EF236F21F100268785 /* CircularGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				A70568B8236F212C00268785 /* AppDelegate.swift */,
-				A70568BA236F212C00268785 /* GameScene.sks */,
-				A70568BC236F212C00268785 /* Actions.sks */,
 				A70568BE236F212C00268785 /* GameScene.swift */,
 				A70568C0236F212C00268785 /* GameViewController.swift */,
+				A70568F4236F21FB00268785 /* CircularGameOfLife */,
 				A70568C2236F212C00268785 /* Main.storyboard */,
 				A70568C5236F212D00268785 /* Assets.xcassets */,
 				A70568C7236F212D00268785 /* LaunchScreen.storyboard */,
@@ -132,6 +133,16 @@
 				A70568E0236F212D00268785 /* Info.plist */,
 			);
 			path = DeepUITests;
+			sourceTree = "<group>";
+		};
+		A70568F4236F21FB00268785 /* CircularGameOfLife */ = {
+			isa = PBXGroup;
+			children = (
+				A70568EC236F21F100268785 /* CircularCell.swift */,
+				A70568EF236F21F100268785 /* CircularGrid.swift */,
+				A70568EE236F21F100268785 /* Rule.swift */,
+			);
+			path = CircularGameOfLife;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,10 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A70568C4236F212C00268785 /* Main.storyboard in Resources */,
-				A70568BB236F212C00268785 /* GameScene.sks in Resources */,
 				A70568C6236F212D00268785 /* Assets.xcassets in Resources */,
 				A70568C9236F212D00268785 /* LaunchScreen.storyboard in Resources */,
-				A70568BD236F212C00268785 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A70568BF236F212C00268785 /* GameScene.swift in Sources */,
+				A70568F0236F21F100268785 /* CircularCell.swift in Sources */,
+				A70568F2236F21F100268785 /* Rule.swift in Sources */,
 				A70568C1236F212C00268785 /* GameViewController.swift in Sources */,
+				A70568F3236F21F100268785 /* CircularGrid.swift in Sources */,
 				A70568B9236F212C00268785 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
