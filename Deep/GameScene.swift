@@ -40,6 +40,7 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        grid = CircularGrid(numSectors: 180, numCircles: 100, isRandom: true, proportion: 30)
         setup()
         restart()
     }
